@@ -1,6 +1,8 @@
-class Books::CLI 
+require 'pry'
 
-    def call 
+class CLI 
+
+    def initialize
         list_texts 
         menu 
         goodbye
@@ -13,20 +15,20 @@ class Books::CLI
     end 
 
     def menu 
-        puts "Choose which text you want more information on or type exit to enter:"
         input = nil 
         while input != "exit"
+            puts "Choose which text you want more information on or type exit to enter:"
             input = gets.strip.downcase  
             case input 
             when "1"
-                puts "More info on deal 1..."
+                puts "More info on text 1..."
             when "2"
-                puts "More info on deal 2..."
+                puts "More info on text 2..."
             end 
         end 
     end 
 
     def goodbye 
-        puts "Peace, fool!"
+        puts "Happy reading!"
     end 
 end 
