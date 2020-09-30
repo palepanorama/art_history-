@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in art_history.gemspec
+# Specify your gem's dependencies in books.gemspec
 gemspec
 
 gem "rake", "~> 12.0"
