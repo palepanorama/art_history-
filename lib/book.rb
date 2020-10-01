@@ -1,11 +1,11 @@
 class Book
-    attr_accessor :name, :book_id
+    attr_accessor :name, :titleInfo
     @@all = []
 
-    def initialize(name: nil, input: nil, book_id: nil)
+    def initialize(name: nil, query: nil, titleInfo: nil)
         @name = name 
-        @input = input 
-        @book_id = book_id 
+        @query = query 
+        @titleInfo = titleInfo 
         @@all << self 
     end 
 
@@ -13,7 +13,7 @@ class Book
         @@all 
     end 
 
-    def self.find_by_input(input)
-        self.all.select {|b| b.input == input}
+    def self.find_by_title(titleInfo)
+        self.all.select {|b| b.titleInfo == titleInfo}
     end 
 end 

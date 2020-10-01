@@ -10,8 +10,8 @@ class CLI
         puts ""
         puts "Enter a keyword to search or type 'exit' to exit"
         puts ""
-        @input = gets.strip.downcase 
-        API.get_books(@input)
+        @query = gets.strip.downcase 
+        API.get_books(@query)
     end 
 
  
