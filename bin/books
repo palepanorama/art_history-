@@ -1,12 +1,6 @@
 #!/usr/bin/ruby
 
-require 'pry'
-require 'httparty'
-require 'json'
-
-require_relative '../lib/cli'
-require_relative '../lib/api'
-require_relative '../lib/book'
+require_relative '../config/environment'
 
 CLI.new.call
 #instantiates new instance of Class CLI 
