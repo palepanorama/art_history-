@@ -20,5 +20,5 @@ class API
         book.author = book_info["author_name"]
         book.subject = book_info["subject"]
     end 
-    binding.pry
+
 end 

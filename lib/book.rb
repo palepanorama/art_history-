@@ -1,5 +1,5 @@
 class Book
-    attr_accessor :title, :author, :subject, :isbn, :publish_year
+    attr_accessor :title, :author, :subject, :isbn, :publish_year, :query
     @@all = []
 
     def initialize(attrs)
@@ -13,7 +13,7 @@ class Book
         @@all 
     end 
 
-    def self.find_by_title(title)
-        self.all.select {|b| b.title == title}
+    def self.find_by_query(query)
+        self.all.select {|b| b.query == query}
     end 
 end 
