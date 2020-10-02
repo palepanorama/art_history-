@@ -2,8 +2,10 @@ class Book
     attr_accessor :title, :author, :subject, :query  
     @@all = []
 
-    def initialize(attributes)
-        attributes.each {|key, value| self.send(("#{key}="), value)}
+    def initialize(attrs)
+        attrs.each do |key, value|
+            self.send "#{key}=", value
+        end 
         @@all << self  
     end 
 
