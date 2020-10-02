@@ -19,6 +19,6 @@ class API
         book.isbn = book_info["isbn"]
         book.author = book_info["author_name"]
         book.subject = book_info["subject"]
-        book.publish_year = book_info["publish_year"]
     end 
+    binding.pry
 end 
