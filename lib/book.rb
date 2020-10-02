@@ -1,5 +1,5 @@
 class Book
-    attr_accessor :title, :author, :subject, :query  
+    attr_accessor :title, :author, :subject 
     @@all = []
 
     def initialize(attrs)
