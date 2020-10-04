@@ -5,11 +5,7 @@ class CLI
     end 
 
     def menu 
-        puts "Welcome to Matt's Book Finder!"
-        puts "-----------------------------"
-        puts ""
-        puts "Enter a keyword to search or type 'exit' to exit"
-        puts ""
+        greeting
         @query = gets.strip.downcase 
         API.get_books(@query)
         print_books
@@ -26,14 +22,17 @@ class CLI
             end  
             input = gets.strip.downcase
         end 
+        goodbye
+    end 
+
+    def greeting 
+        puts "Welcome to Matt's Book Finder!"
+        puts "-----------------------------"
         puts ""
-        puts "Thanks for using Matt's Book Finder!"
-        puts ""
-        puts "Happy reading!"
+        puts "Enter a keyword to search, type 'list' to see the list again, or type 'exit' to exit"
         puts ""
     end 
     
-
     def prompt
         puts ""
         puts "Select a number to see the details of a book or type 'exit' to exit."
@@ -57,7 +56,14 @@ class CLI
         puts ""
         puts "Subject: #{book.subject}"
         puts ""
+    end 
 
+    def goodbye 
+        puts ""
+        puts "Thanks for using Matt's Book Finder!"
+        puts ""
+        puts "Happy reading!"
+        puts ""
     end 
 
 
