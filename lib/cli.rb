@@ -1,12 +1,12 @@
 class CLI 
 
     def call
+        greeting
         menu 
         goodbye
     end 
 
     def menu 
-        greeting
         @query = gets.strip.downcase 
         API.get_books(@query)
         print_books
