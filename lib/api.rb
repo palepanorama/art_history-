@@ -6,7 +6,7 @@ class API
         books = JSON.parse(response)["docs"]
          books.each do |b|
             if !Book.all.find{|book| book.title.downcase == b["title"].downcase}
-                Book.new(title: b["title"], author: b["author_name"], subject: b["subject"][0], isbn: b["isbn"]) 
+                Book.new(title: b["title"], author: b["author_name"], subject: b["subject"][0], isbn: b["isbn"], publish_year: b["publish_year"]) 
              end 
         end 
     end 

@@ -16,12 +16,10 @@ class CLI
         prompt
         input = gets.strip.downcase
         book = Book.find_by_query(@queries)[input.to_i - 1]
-        # binding.pry
         while input != 'exit' 
             if input == 'list'
                 print_books
             elsif input.to_i > 0 && input.to_i <= Book.find_by_query(@queries).length
-                # input 
                 print_choice(book)
             else 
                 puts "I don't understand that. Please try again."
@@ -49,13 +47,15 @@ class CLI
         end 
     end 
 
-    def book_author(book_author)
-        @book_author = book.author.join("")
-    end 
-
     def print_choice(book)
         puts ""
-        puts "#{book.title} by #{@book_author}"
+        puts "#{book.title} by #{book.author[0]}"
+        puts ""
+        puts "ISBN: #{book.isbn[0]}"
+        puts ""
+        puts "Year published: #{book.publish_year[0]}"
+        puts ""
+        puts "Subject: #{book.subject}"
         puts ""
 
     end 
