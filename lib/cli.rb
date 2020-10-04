@@ -32,7 +32,7 @@ class CLI
         puts "Welcome to Matt's Book Finder!".blue.bold
         puts "-----------------------------".blue.bold
         puts ""
-        puts "Enter a keyword to search for or type 'exit' to exit".blue
+        puts "Enter a keyword to search for:".blue
         puts ""
     end 
     
@@ -73,7 +73,5 @@ class CLI
         puts "--------------".blue.bold
         puts ""
     end 
-
-
 end 
 
