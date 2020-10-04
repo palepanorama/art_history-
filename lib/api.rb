@@ -16,8 +16,6 @@ class API
         uri = URI(url)
         response = Net::HTTP.get(uri)
         book_info = JSON.parse(response)["docs"][0]
-        binding.pry 
-
         book.isbn = book_info["isbn"]
         book.author = book_info["author_name"]
         book.subject = book_info["subject"]
