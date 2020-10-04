@@ -2,6 +2,7 @@ class CLI
 
     def call
         menu 
+        goodbye
     end 
 
     def menu 
@@ -23,9 +24,8 @@ class CLI
                 puts "I don't understand that. Please try again.".blue.bold
             end  
             input = gets.strip.downcase
-            binding.pry
+            # binding.pry
         end 
-        goodbye 
     end 
 
     def greeting 
