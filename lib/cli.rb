@@ -24,7 +24,6 @@ class CLI
                 puts "I don't understand that. Please try again.".blue.bold
             end  
             input = gets.strip.downcase
-            # binding.pry
         end 
     end 
 
