@@ -32,13 +32,13 @@ class CLI
         puts "Welcome to Matt's Book Finder!".blue.bold
         puts "-----------------------------".blue.bold
         puts ""
-        puts "Enter a keyword to search or type 'exit' to exit".blue.bold
+        puts "Enter a keyword to search for or type 'exit' to exit".blue.bold
         puts ""
     end 
     
     def prompt
         puts ""
-        puts "Select a number to see the details of a books.".blue.bold
+        puts "Select a number to see the details of a book.".blue.bold
         puts ""
     end 
 
