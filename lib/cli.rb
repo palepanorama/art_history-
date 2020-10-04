@@ -10,6 +10,7 @@ class CLI
         @query = gets.strip.downcase 
         API.get_books(@query)
         print_books
+        prompt 
         input = gets.strip.downcase 
         while input != 'exit' 
             if input == 'books'
@@ -19,7 +20,7 @@ class CLI
                 print_choice(@book)
                 puts "If you'd like to see information on another book from this list, type its number in here.".blue
                 puts ""
-                puts "To see the list again, type 'books.'".blue
+                puts "To see the list again, type 'books' or type 'exit' to exit.".blue
             else 
                 puts "I don't understand that. Please try again.".blue.bold
             end  
@@ -37,7 +38,7 @@ class CLI
     
     def prompt
         puts ""
-        puts "Select a number to see the details of a book.".blue
+        puts "Select a number to see the details of a book or type 'exit' to exit.".blue
         puts ""
     end 
 
@@ -47,7 +48,6 @@ class CLI
         results.each.with_index(1) do |b, i|
             puts "#{i}. #{b.title}".blue
         end 
-        prompt 
     end 
 
     def print_choice(book)
