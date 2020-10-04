@@ -16,11 +16,11 @@ class CLI
             elsif input.to_i > 0 && input.to_i <= Book.find_by_query(@queries).length
                 @book = Book.find_by_query(@queries)[input.to_i - 1]
                 print_choice(@book)
-                puts "If you'd like to see information on another book from this list, type its number in here."
+                puts "If you'd like to see information on another book from this list, type its number in here.".blue.bold
                 puts ""
-                puts "To see the list again, type 'books.'"
+                puts "To see the list again, type 'books.'".blue.bold
             else 
-                puts "I don't understand that. Please try again."
+                puts "I don't understand that. Please try again.".blue.bold
             end  
             input = gets.strip.downcase
             # binding.pry
@@ -29,16 +29,16 @@ class CLI
     end 
 
     def greeting 
-        puts "Welcome to Matt's Book Finder!"
-        puts "-----------------------------"
+        puts "Welcome to Matt's Book Finder!".blue.bold
+        puts "-----------------------------".blue.bold
         puts ""
-        puts "Enter a keyword to search or type 'exit' to exit"
+        puts "Enter a keyword to search or type 'exit' to exit".blue.bold
         puts ""
     end 
     
     def prompt
         puts ""
-        puts "Select a number to see the details of a books."
+        puts "Select a number to see the details of a books.".blue.bold
         puts ""
     end 
 
@@ -46,31 +46,31 @@ class CLI
     def print_books
         results = Book.find_by_query(@queries)
         results.each.with_index(1) do |b, i|
-            puts "#{i}. #{b.title}"
+            puts "#{i}. #{b.title}".blue.bold
         end 
         prompt 
     end 
 
     def print_choice(book)
-        puts "Title: #{book.title}"
+        puts "Title: #{book.title}".blue.bold
         puts ""
-        puts "Author: #{book.author[0]}" if book.author != nil 
+        puts "Author: #{book.author[0]}".blue.bold if book.author != nil 
         puts ""
-        puts "ISBN: #{book.isbn[0]}" if book.isbn != nil 
+        puts "ISBN: #{book.isbn[0]}".blue.bold if book.isbn != nil 
         puts ""
-        puts "Year published: #{book.publish_year[0]}" if book.publish_year != nil 
+        puts "Year published: #{book.publish_year[0]}".blue.bold if book.publish_year != nil 
         puts ""
-        puts "Subject: #{book.subject}" if book.subject != nil 
+        puts "Subject: #{book.subject}".blue.bold if book.subject != nil 
         puts ""
     end 
 
     def goodbye 
         puts ""
-        puts "Thanks for using Matt's Book Finder!"
-        puts "-----------------------------------"
+        puts "Thanks for using Matt's Book Finder!".blue.bold
+        puts "-----------------------------------".blue.bold
         puts ""
-        puts "Happy reading!"
-        puts "-------------"
+        puts "Happy reading!".blue.bold
+        puts "--------------".blue.bold
         puts ""
     end 
 
