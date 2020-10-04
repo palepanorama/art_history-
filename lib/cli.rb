@@ -23,7 +23,7 @@ class CLI
                 puts "I don't understand that. Please try again."
             end  
             input = gets.strip.downcase
-            binding.pry
+            # binding.pry
         end 
         goodbye 
     end 
@@ -67,8 +67,10 @@ class CLI
     def goodbye 
         puts ""
         puts "Thanks for using Matt's Book Finder!"
+        puts "-----------------------------------"
         puts ""
         puts "Happy reading!"
+        puts "-------------"
         puts ""
     end 
 
