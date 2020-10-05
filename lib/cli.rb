@@ -44,8 +44,7 @@ class CLI
 
 
     def print_books
-        results = Book.find_by_query(@queries)
-        results.each.with_index(1) do |b, i|
+        Book.find_by_query(@queries).each.with_index(1) do |b, i|
             puts "#{i}. #{b.title}".blue
         end 
     end 
